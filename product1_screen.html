@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Woxmen | [Product Name] - Precision Medical Solutions</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2e1",
+                    "on-tertiary-fixed": "#001d32",
+                    "on-primary-fixed": "#410003",
+                    "secondary-fixed": "#e4e2e1",
+                    "primary-fixed": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dbdad8",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f0ef",
+                    "on-tertiary-container": "#44b0ff",
+                    "on-secondary-fixed": "#1b1c1b",
+                    "background": "#fbf9f7",
+                    "on-background": "#1b1c1b",
+                    "on-surface-variant": "#58413f",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "on-secondary-fixed-variant": "#464746",
+                    "tertiary": "#002a45",
+                    "on-primary-container": "#ff847c",
+                    "surface": "#fbf9f7",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5e5e5d",
+                    "outline": "#8b716e",
+                    "on-secondary-container": "#626362",
+                    "surface-tint": "#a93632",
+                    "surface-container-highest": "#e4e2e1",
+                    "primary-container": "#7b1315",
+                    "on-primary-fixed-variant": "#881d1d",
+                    "outline-variant": "#dfbfbc",
+                    "on-surface": "#1b1c1b",
+                    "on-tertiary-fixed-variant": "#004a75",
+                    "surface-container-low": "#f5f3f2",
+                    "inverse-primary": "#ffb3ad",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed": "#cde5ff",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e1dfde",
+                    "surface-bright": "#fbf9f7",
+                    "primary": "#580006",
+                    "surface-container-high": "#e9e8e6",
+                    "tertiary-fixed-dim": "#95ccff",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#efedec",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#004167",
+                    "inverse-surface": "#303030"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-transition { transition: background-color 0.3s ease; }
+      .glass-header { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_40px_rgba(88,65,63,0.08)]">
+<nav class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-black text-[#7B1315] tracking-tighter font-headline">Woxmen</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#7B1315] border-b-2 border-[#7B1315] pb-1 font-headline font-bold tracking-tight" href="#">Diagnostic</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7B1315] transition-colors font-headline font-bold tracking-tight" href="#">Surgical</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7B1315] transition-colors font-headline font-bold tracking-tight" href="#">Imaging</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#7B1315] transition-colors font-headline font-bold tracking-tight" href="#">Support</a>
+</div>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-lg font-headline font-bold hover:bg-primary transition-all active:scale-95">Request Demo</button>
+</nav>
+</header>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center" href="#">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.405.836 3.125 1.282 4.875 1.283 4.883.002 8.857-3.973 8.859-8.859.001-2.369-.921-4.594-2.596-6.27-1.675-1.674-3.901-2.595-6.272-2.596-4.884 0-8.858 3.974-8.86 8.86-.001 1.706.488 3.37 1.412 4.82l-.934 3.411 3.521-.924zm10.973-6.347c-.26-.13-1.536-.758-1.773-.844-.237-.086-.41-.13-.582.13s-.664.844-.813 1.017-.3.195-.559.066c-.26-.13-1.097-.404-2.09-1.289-.771-.688-1.292-1.538-1.443-1.798-.152-.26-.016-.401.114-.53.117-.116.26-.303.39-.455.129-.152.172-.26.26-.433.086-.173.043-.325-.022-.455s-.582-1.401-.797-1.921c-.21-.506-.42-.437-.582-.445l-.497-.006c-.172 0-.453.065-.69.325s-.906.887-.906 2.162.93 2.51 1.06 2.683c.13.173 1.83 2.795 4.433 3.918.619.267 1.102.427 1.479.546.622.197 1.187.17 1.634.103.498-.073 1.536-.628 1.751-1.234.216-.607.216-1.126.151-1.234-.065-.109-.237-.174-.497-.303z"></path></svg>
+</a>
+<main class="pt-20">
+<!-- Section 1: Hero -->
+<section class="relative min-h-[870px] flex items-center px-8 overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 order-2 lg:order-1">
+<span class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary-container bg-primary-fixed rounded-full">CERTIFIED MEDICAL GRADE</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        [Product Name] Machine for <span class="text-primary-container">Clinics in India</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        Industry-leading precision meet PAN India installation support. Elevate your practice with Woxmen's advanced [Product Name] technology and 24/7 technical assistance.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-xl font-headline font-bold hover:shadow-xl transition-all flex items-center gap-2">
+                            Request Demo <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-headline font-bold hover:bg-surface-variant transition-all flex items-center gap-2 border border-outline-variant/20">
+                            WhatsApp Enquiry
+                        </button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="absolute inset-0 bg-primary-container/5 rounded-[3rem] -rotate-3 scale-105"></div>
+<img alt="[Product Name] Medical Device" class="relative z-10 w-full h-[500px] object-cover rounded-[2.5rem] shadow-2xl" data-alt="Modern high-tech medical aesthetic laser machine in a clean white clinical setting with soft natural lighting and minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmjrsnifmwoo0_UkVMPAKh67zoVKXVUkTgNKZKdpMuVsFGxpGMCGyjZuQ872lC9Mg3XcKcF25eHzUZ-PSMym7shU8vHeEbqtPfFE8QluaDjq_lI7J6kiQxbY_3P_Hyp8acCgFriLIkbzQr7uSQNQ1E8rhb_mw1F6YHuFmSEQuFCHAoXZSn63QUrFskMsS6jtNflZXasBOVLoin__WQtcGeXKlgDm2d1pEai7vZ9mcFzwBmPhLitvXeqLOjtqhBT8eXf8HvkCRdr-o"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Introduction (SEO Block) -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-8">Revolutionizing Aesthetic Treatments</h2>
+<div class="text-lg text-secondary leading-loose space-y-6">
+<p>
+                        The [Product Name] system represents the pinnacle of non-invasive clinical technology, specifically engineered to meet the diverse needs of Indian skin types. By utilizing state-of-the-art energy delivery mechanisms, this platform ensures maximum efficacy while maintaining the highest safety standards required for premium clinics. Whether you are expanding your dermatology practice or starting a new wellness center, the [Product Name] offers an unparalleled return on investment through its versatile application range and low maintenance overheads.
+                    </p>
+<p>
+                        Woxmen Technologies LLP brings this global standard to your doorstep in India, combining world-class hardware with an ecosystem of training, clinical protocols, and marketing support. Our [Product Name] machines are rigorously tested for performance stability under varying electrical and environmental conditions common in the Indian subcontinent.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Product Overview (Specs) -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+<div class="space-y-6 sticky top-32">
+<div class="aspect-square bg-surface-container-lowest rounded-[2rem] p-12 flex items-center justify-center overflow-hidden">
+<img alt="Technical Specifications" class="w-full h-full object-contain" data-alt="Close up detail of a medical laser handpiece showing precision lens and ergonomic design on a white professional backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUoo6PKe6-yT_tcmDv3mtWiQR44bsDUWfJ-aLccHM1DKeR3U0ANwxrXZ_UjK4PSyes4RhgQdbI6ed5AGXH-QeVN-5O3kqaOXz7kpbKmQAUeTrDWHDToUKM0C9kgYhhgRx_VjnQ3zVCPDAYBc8a9koAxsyu2Fp_V2VFFDvgsOdQqdNY047rQLbKwQCqW0TFQBenHoAmnwIkZG9rCzIvpbUFq0vSQWrR4LGyg7PNv47DEJYS5urNTXX0Hikdl-p8VGr5w01JK5cxHCU"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded-xl border-l-4 border-primary-container">
+<span class="block text-xs uppercase tracking-wider text-on-surface-variant font-bold mb-1">Origin</span>
+<span class="font-headline font-extrabold">ISO Certified</span>
+</div>
+<div class="p-4 bg-surface-container rounded-xl border-l-4 border-primary-container">
+<span class="block text-xs uppercase tracking-wider text-on-surface-variant font-bold mb-1">Warranty</span>
+<span class="font-headline font-extrabold">24 Months</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-4">Technical Specifications</h2>
+<p class="text-secondary mb-12">Engineered for consistent performance and clinical accuracy.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl">
+<span class="font-bold text-on-surface-variant">Technology</span>
+<span class="font-headline font-extrabold text-primary-container">Advanced [Tech Type]</span>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest rounded-2xl shadow-sm">
+<span class="font-bold text-on-surface-variant">Power Output</span>
+<span class="font-headline font-extrabold text-on-surface">3000W Peak Performance</span>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl">
+<span class="font-bold text-on-surface-variant">Wavelength</span>
+<span class="font-headline font-extrabold text-on-surface">808nm / Tri-wavelength</span>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest rounded-2xl shadow-sm">
+<span class="font-bold text-on-surface-variant">Shot Capacity</span>
+<span class="font-headline font-extrabold text-on-surface">50 Million+ High-Yield</span>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-2xl">
+<span class="font-bold text-on-surface-variant">Cooling System</span>
+<span class="font-headline font-extrabold text-on-surface">Dual TEC Active Cooling</span>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest rounded-2xl shadow-sm">
+<span class="font-bold text-on-surface-variant">Screen Interface</span>
+<span class="font-headline font-extrabold text-on-surface">15.6" Android Smart Touch</span>
+</div>
+</div>
+<div class="mt-12 p-8 bg-primary-container rounded-[2rem] text-white flex items-center justify-between">
+<div>
+<p class="text-primary-fixed/80 font-bold mb-1 uppercase tracking-widest text-xs">Starting From</p>
+<p class="text-3xl font-headline font-extrabold">Competitive B2B Pricing</p>
+</div>
+<button class="bg-white text-primary-container px-6 py-3 rounded-xl font-bold hover:scale-105 transition-transform">Get Quote</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Key Features -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-4">Precision Engineered Features</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">The [Product Name] combines safety, speed, and comfort in one unified clinical platform.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-10 bg-surface-container-lowest rounded-3xl hover:shadow-xl transition-all group">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-4">Advanced Technology</h3>
+<p class="text-secondary leading-relaxed">Integrated AI-driven pulse control for consistent energy delivery regardless of session duration.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest rounded-3xl hover:shadow-xl transition-all group">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-4">Safe for Indian Skin</h3>
+<p class="text-secondary leading-relaxed">Specially calibrated protocols for Fitzpatrick skin types III to VI, ensuring zero burn risks.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest rounded-3xl hover:shadow-xl transition-all group">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-4">High Performance</h3>
+<p class="text-secondary leading-relaxed">Short treatment times and high patient throughput with rapid repetition rates up to 10Hz.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Applications -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-4">Clinical Applications</h2>
+<p class="text-on-surface-variant">Multi-modal functionality allows for a wide array of high-demand aesthetic procedures.</p>
+</div>
+<button class="text-primary-container font-headline font-extrabold flex items-center gap-2 hover:translate-x-2 transition-transform">
+                        Download Brochure <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="relative h-80 rounded-3xl overflow-hidden group">
+<img alt="Hair Removal" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Professional aesthetician performing laser treatment on a patient skin, bright clinical lighting, focused and clean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeqoR6qWpynh_DSFGn0kXKShEgSImj1hwWyZ4sOIiM6b_nJUSBzOqZX-iCmlr61y-nkXipy9dmNO531fpoWaBA09vZVYyFVdb8omh3MQbVuuPGU1Ernmt2nWKjGExD_QNnVJPPyV1idQ3R2Hyw-MvxA031VgNnNqJlEzcO8hu-OF47C4JCHZ0zcpVSwojrdhTZ9UqFfC36tLoeEruHHrKzkfR1R-nxbKgTeKudd_pH1BYbpUzmpOiZ2Zv_gieOC-3-0cvXwptLzPw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent flex items-end p-8">
+<h4 class="text-white font-headline font-extrabold text-xl">Permanent Hair Removal</h4>
+</div>
+</div>
+<div class="relative h-80 rounded-3xl overflow-hidden group">
+<img alt="Skin Tightening" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Model with glowing skin under soft diffuse lighting, emphasizing skin health and texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0oGG053faJu6Ws7rU3zCtd1nwvkhL0RygLMvqzJAFfnQav8RYjz0HJT13LNEYLgAVLXJvNQcoK62TouUTokhqnx9epc3mTATPyya-e9AUi_Ba6wr3nxfko2c69lY67_4F_rriv8LWw1ZRkFiKflQWbu4WzafD5qH7Q5CpqjMgiyP_ZgC9u3pZ1JZeA6XfataMpQ1sKIl6DhV0zLZQf5fUd887FsVogzb-tRKsN_TeN_C1dgkNB-k1iYT-dV4bX1GD5v06vTZ3u3Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent flex items-end p-8">
+<h4 class="text-white font-headline font-extrabold text-xl">Skin Tightening</h4>
+</div>
+</div>
+<div class="relative h-80 rounded-3xl overflow-hidden group">
+<img alt="Pigmentation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dermatology tool close up on clear skin, scientific and professional aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX0ck5i9xtIazxdQKqtRbFZAQWqTrM47fnsTs7715KnGTduUVMslrSZYVq6V2BWpvajk9fn87u2BippEM4BN_j4jmoLt-H4HJKoB7ILMafZ_OQf2pJa8NVn82ULS7okds-bHpnYzXy05b80DxqubE5lFr7MT3N7Fit_swZmSBsAmL5dqNbEQQ5Qv9mMDyIGumi38UzJ70ngzFroWw5E-xg1A5NVQbObOvAtlLOeuw5X7tnlJkH0D3q5wSGJbSHiZKh2qfyyF6CnIk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent flex items-end p-8">
+<h4 class="text-white font-headline font-extrabold text-xl">Pigmentation Therapy</h4>
+</div>
+</div>
+<div class="relative h-80 rounded-3xl overflow-hidden group">
+<img alt="Acne Treatment" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a glass medical bottle and clinical tools in a sterile environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIlfdhfXrFmIYBfWEiRT2a8pccsRmhAVfyJOvHZsadaxj1xu-9mJcddamgy1HSII0tM9IM5uP_zLVwZ3I8339_JolExRw4IMsc_1uNXYurwJdCOJAF0GhMWewuTSxBe22Lwjibu_zUT1xfnR6jjiBPnQ9jNyqtYUb89nYhcqP8TZeevOTTrPCYHtYFodtW-hV0caZTH_KCzRn790NmLmH9IzjvV3CztzMVZdpPmR2k48ajn4jAVazhm5C4RyqZN3yBiAAXKpkKOJ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent flex items-end p-8">
+<h4 class="text-white font-headline font-extrabold text-xl">Active Acne Treatment</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: How it Works (Technical SEO) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-8">Science Behind the Technology</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center font-extrabold text-primary-container shadow-sm">01</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Selective Photothermolysis</h4>
+<p class="text-secondary leading-relaxed">The [Product Name] emits concentrated light energy that is absorbed specifically by the target chromophore without affecting surrounding tissues.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center font-extrabold text-primary-container shadow-sm">02</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Dynamic Cooling Integration</h4>
+<p class="text-secondary leading-relaxed">Concurrent cooling of the epidermis before and during energy discharge protects the skin surface and increases patient comfort significantly.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white rounded-full flex items-center justify-center font-extrabold text-primary-container shadow-sm">03</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Coherent Pulse Distribution</h4>
+<p class="text-secondary leading-relaxed">Advanced capacitors ensure that energy delivery is uniform across the entire pulse duration, preventing "hot spots" and inconsistent results.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary-container p-12 rounded-[3rem] shadow-2xl rotate-1">
+<h3 class="text-2xl font-headline font-extrabold text-white mb-6">Expert Consultation</h3>
+<p class="text-primary-fixed/80 mb-8">Discuss the clinical outcomes of [Product Name] with our medical engineers.</p>
+<form class="space-y-4">
+<input class="w-full bg-white/10 border-none rounded-xl p-4 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/40" placeholder="Clinic Name" type="text"/>
+<input class="w-full bg-white/10 border-none rounded-xl p-4 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/40" placeholder="Phone Number" type="tel"/>
+<button class="w-full bg-white text-primary-container py-4 rounded-xl font-headline font-bold hover:bg-primary-fixed transition-colors">Call Back Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Why Choose Woxmen -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-4">The Woxmen Advantage</h2>
+<p class="text-on-surface-variant">We don't just sell machines; we build successful practices.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center p-8 bg-surface-container rounded-3xl">
+<span class="material-symbols-outlined text-5xl text-primary-container mb-6">public</span>
+<h4 class="font-headline font-extrabold mb-2">PAN India Support</h4>
+<p class="text-sm text-secondary">Service engineers stationed in every major metro for 24hr response time.</p>
+</div>
+<div class="text-center p-8 bg-surface-container rounded-3xl">
+<span class="material-symbols-outlined text-5xl text-primary-container mb-6">school</span>
+<h4 class="font-headline font-extrabold mb-2">Hands-on Training</h4>
+<p class="text-sm text-secondary">Certified clinical training for your staff on-site at your clinic.</p>
+</div>
+<div class="text-center p-8 bg-surface-container rounded-3xl">
+<span class="material-symbols-outlined text-5xl text-primary-container mb-6">trending_up</span>
+<h4 class="font-headline font-extrabold mb-2">ROI Focused</h4>
+<p class="text-sm text-secondary">Proven business models to help you recover your investment in months.</p>
+</div>
+<div class="text-center p-8 bg-surface-container rounded-3xl">
+<span class="material-symbols-outlined text-5xl text-primary-container mb-6">history</span>
+<h4 class="font-headline font-extrabold mb-2">Buy-Back Schemes</h4>
+<p class="text-sm text-secondary">Upgrade to future technologies with guaranteed buy-back values.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: FAQ (Accordion) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-4xl font-headline font-extrabold text-on-surface mb-12 text-center">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-headline font-bold text-on-surface">Is [Product Name] safe for all Indian skin types?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary leading-relaxed border-t border-surface-container">
+                            Yes, our [Product Name] machines are specifically calibrated for Fitzpatrick skin types III to VI. The cooling technology ensures safety even at high fluences.
+                        </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-headline font-bold text-on-surface">What is the expected ROI for a new clinic?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary leading-relaxed border-t border-surface-container">
+                            Most clinics achieve operational break-even within 6-8 months, depending on patient volume and treatment pricing in their local market.
+                        </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-headline font-bold text-on-surface">How often does the machine require maintenance?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary leading-relaxed border-t border-surface-container">
+                            We recommend a quarterly preventive maintenance check. Our AMC packages cover all consumables and periodic technical audits.
+                        </div>
+</details>
+<details class="group bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="font-headline font-bold text-on-surface">Does Woxmen provide clinical training?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary leading-relaxed border-t border-surface-container">
+                            Yes, we provide extensive 3-day on-site training followed by certification for your clinical staff upon installation.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Section 9: SEO Keywords (Tag Cloud) -->
+<section class="py-16 px-8 bg-surface">
+<div class="max-w-7xl mx-auto border-t border-outline-variant/10 pt-16">
+<h3 class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-8">Related Search Categories</h3>
+<div class="flex flex-wrap gap-3">
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">IPL Machine Delhi</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Diode Laser Mumbai</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Medical Laser Price India</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Aesthetic Clinic Equipment</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Dermatology Machines Bangalore</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">CO2 Fractional Laser Price</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Woxmen Medical Solutions</a>
+<a class="px-4 py-2 bg-surface-container rounded-full text-sm font-medium text-secondary hover:bg-primary-container hover:text-white transition-colors" href="#">Tattoo Removal Machine India</a>
+</div>
+</div>
+</section>
+<!-- Section 10: Blog Slider -->
+<section class="py-24 px-8 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-12">Latest Insights on [Product Name]</h2>
+<div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 snap-x">
+<div class="flex-shrink-0 w-80 snap-start group">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden mb-6">
+<img alt="Blog Post 1" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Modern medical laboratory with equipment, clinical and scientific atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIYQ6Kc-RtdyNSdcDxOcdx1kSHgahcyT2mDZdKVSClfsKAiiEa5p_buND_4szlwuVqDui3gs_PzePkpghWPmwTgCufd0iNkEsn5xb3MfvxiMwWM_A_zCKnLqwvC0abc4td7SHwvt5LQlnAt-jSvEheslfDAvPsFX3fEHbp9iW5RdORlT7X_SH2lW7WChr9NZEGTTrBYqHVO3YoDgeatsxrBNLoApG0xjBUvM52_OR7KBikxfUy0A_o0CVy_xh8e7vzLSy9f9oQe2A"/>
+</div>
+<h4 class="font-headline font-bold text-xl mb-2 group-hover:text-primary-container transition-colors">Optimizing Energy for Indian Skin</h4>
+<p class="text-secondary text-sm line-clamp-2">Learn the clinical protocols for maximizing hair removal efficiency in summer months...</p>
+</div>
+<div class="flex-shrink-0 w-80 snap-start group">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden mb-6">
+<img alt="Blog Post 2" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Macro photography of a medical laser beam interaction, scientific blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN7To3NFPsr_zEVKe3Lv0XumkF-B8fx1k2lkpTQkRi0Ra5EiN6j09piQhjf1dnPEzjVKp9GVOzUItHdo2EBm2zHEQz35x-1vZeczVhGV3TCRb_SJ7Xl0C3mJ88sZR9sgtUsEi1tcbBIj6kXigc5dNhI1l4PpSHy-M1t6s3eGSQ68TC3ZGU5m2DwvYQ3aJxX9wv-gO4n4sZZQ2Y9AD7oCgYD_qepoRDimae3YRmUgecLbjhZ5PfbRn81ehUsrph-5Qq_rcHXb9GvjY"/>
+</div>
+<h4 class="font-headline font-bold text-xl mb-2 group-hover:text-primary-container transition-colors">ROI Guide for Clinics</h4>
+<p class="text-secondary text-sm line-clamp-2">A step-by-step financial model for integrating [Product Name] into your service list...</p>
+</div>
+<div class="flex-shrink-0 w-80 snap-start group">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden mb-6">
+<img alt="Blog Post 3" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Engineer working on a medical circuit board, precision manufacturing context" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXpmE8myrWqhWPdIgaVTi0vRO40-lkHzPJKTP7MEmekleBrvdihbYOqui4Fmh060hq2kQibIhymMk9Vcb8E7kVIu5_LwvM7-UgmOHcIQT0tSZcvjPbTlmlQfjB9vPMzaLC5z2n9dGFyb7fp4s8EJPrFdHmyFrKoDaRCOJmgvHbyca7RI7Fx9buSqqFgdwAPtxNA9zv1YdkZVnae8LtPX-WwKfzNJIOna7y5XLs8NflmD3VK1adDxhy1xC8jyzUZkxGLtmCubSdB4E"/>
+</div>
+<h4 class="font-headline font-bold text-xl mb-2 group-hover:text-primary-container transition-colors">Safety Standard Checklist</h4>
+<p class="text-secondary text-sm line-clamp-2">Essential safety guidelines for operating high-power aesthetic devices in India...</p>
+</div>
+<div class="flex-shrink-0 w-80 snap-start group">
+<div class="aspect-[4/3] rounded-3xl overflow-hidden mb-6">
+<img alt="Blog Post 4" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Abstract medical technology visualization with hexagonal patterns and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXD5IWL7AJMMdCyJuSyo2qrja92fPgKDwwo-2xj8_8SFGLXvinnvyl0TYIgW7bM1Er6FPbcTShc8mrWdkI_MT4ffgGliKTHWUx2_uGTMEOcPTsM-1M3Z4_7vw-k6bYRS4Kvur6H7R941pItfmQdZEtYt70jWuBuGoo-EK-RidUTs87UUiizVMMQ6r8SrIwDp609iKoAWkyhe7Jy0lHSKvwYgEw5Fki6Us4nPm-dcDdFUmo7M2ijKMzfxNLnHdr9jWD4Z3R__ybFbM"/>
+</div>
+<h4 class="font-headline font-bold text-xl mb-2 group-hover:text-primary-container transition-colors">The Future of [Product Name]</h4>
+<p class="text-secondary text-sm line-clamp-2">Exploring upcoming software updates and AI features for existing Woxmen customers...</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 11: Internal Linking -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-12">Explore Other Technologies</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="p-8 bg-white rounded-3xl flex items-center justify-between group hover:bg-primary-container transition-all" href="#">
+<span class="font-headline font-bold group-hover:text-white">Diagnostic Imaging</span>
+<span class="material-symbols-outlined text-primary-container group-hover:text-white transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+<a class="p-8 bg-white rounded-3xl flex items-center justify-between group hover:bg-primary-container transition-all" href="#">
+<span class="font-headline font-bold group-hover:text-white">Surgical Lasers</span>
+<span class="material-symbols-outlined text-primary-container group-hover:text-white transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+<a class="p-8 bg-white rounded-3xl flex items-center justify-between group hover:bg-primary-container transition-all" href="#">
+<span class="font-headline font-bold group-hover:text-white">Body Contouring</span>
+<span class="material-symbols-outlined text-primary-container group-hover:text-white transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 12: Final CTA -->
+<section class="py-24 px-8 relative overflow-hidden bg-primary-container">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<path d="M0 0 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto relative z-10 text-center">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold text-white mb-8">Upgrade Your Clinic with <br class="hidden md:block"/>[Product Name]</h2>
+<p class="text-primary-fixed/80 text-xl mb-12 max-w-2xl mx-auto">Join 500+ successful clinics across India using Woxmen Technologies. Start your journey today with a live demonstration.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-white text-primary-container px-10 py-5 rounded-2xl font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform">Request Live Demo</button>
+<button class="bg-primary-container border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-lg hover:bg-white/10 transition-colors">Check Best Price</button>
+<button class="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform flex items-center gap-3">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.405.836 3.125 1.282 4.875 1.283 4.883.002 8.857-3.973 8.859-8.859.001-2.369-.921-4.594-2.596-6.27-1.675-1.674-3.901-2.595-6.272-2.596-4.884 0-8.858 3.974-8.86 8.86-.001 1.706.488 3.37 1.412 4.82l-.934 3.411 3.521-.924zm10.973-6.347c-.26-.13-1.536-.758-1.773-.844-.237-.086-.41-.13-.582.13s-.664.844-.813 1.017-.3.195-.559.066c-.26-.13-1.097-.404-2.09-1.289-.771-.688-1.292-1.538-1.443-1.798-.152-.26-.016-.401.114-.53.117-.116.26-.303.39-.455.129-.152.172-.26.26-.433.086-.173.043-.325-.022-.455s-.582-1.401-.797-1.921c-.21-.506-.42-.437-.582-.445l-.497-.006c-.172 0-.453.065-.69.325s-.906.887-.906 2.162.93 2.51 1.06 2.683c.13.173 1.83 2.795 4.433 3.918.619.267 1.102.427 1.479.546.622.197 1.187.17 1.634.103.498-.073 1.536-.628 1.751-1.234.216-.607.216-1.126.151-1.234-.065-.109-.237-.174-.497-.303z"></path></svg>
+                        WhatsApp Sales
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-stone-950 dark:bg-black">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto border-t border-stone-800 pt-16">
+<div class="col-span-2 md:col-span-1">
+<div class="text-xl font-bold text-white mb-6">Woxmen</div>
+<p class="text-stone-400 text-sm leading-relaxed mb-6">
+                    Pioneers in medical laser technology and clinical aesthetics solutions. Delivering precision instruments across the globe.
+                </p>
+<div class="flex gap-4">
+<span class="w-8 h-8 rounded-full bg-stone-800"></span>
+<span class="w-8 h-8 rounded-full bg-stone-800"></span>
+<span class="w-8 h-8 rounded-full bg-stone-800"></span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Product Range</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Diagnostic</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Surgical</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Imaging</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">About Us</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Contact</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Global Locations</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Technical Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Clinical Papers</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors text-sm" href="#">Maintenance</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-stone-900 text-center text-stone-500 text-xs">
+            © 2024 Woxmen Medical Solutions. All rights reserved.
+        </div>
+</footer>
+</body></html>
