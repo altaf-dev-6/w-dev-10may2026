@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
@@ -81,7 +81,9 @@ export default async function CityBlogPage({ params }: { params: Promise<{ city:
       </section>
 
       {/* Blog Grid Section */}
-      <BlogFilterGrid cityName={cityName} />
+      <Suspense fallback={<div className="py-24 text-center">Loading insights...</div>}>
+        <BlogFilterGrid cityName={cityName} />
+      </Suspense>
 
       {/* Internal Linking */}
       <section className="py-20 bg-surface-container-low border-y border-outline-variant/10">
