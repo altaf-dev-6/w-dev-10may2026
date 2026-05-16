@@ -42,9 +42,11 @@ export default function Home() {
               Elevate your practice with world-class medical technology. Premium IPL, Diode Laser, and HIFU solutions engineered for clinical precision and patient safety.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-primary-container text-white px-8 py-4 rounded-md font-bold hover:bg-primary transition-colors flex items-center gap-2">
-                Request Demo <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
+              <Link href="/contact-us">
+                <button className="bg-primary-container text-white px-8 py-4 rounded-md font-bold hover:bg-primary transition-colors flex items-center gap-2">
+                  Request Demo <span className="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </Link>
               <button className="bg-[#25D366] text-white px-8 py-4 rounded-md font-bold hover:opacity-90 transition-opacity flex items-center gap-2">
                 <span className="material-symbols-outlined">chat</span> WhatsApp Expert
               </button>

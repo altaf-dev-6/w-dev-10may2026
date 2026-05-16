@@ -7,10 +7,17 @@ export default function HIFUMachinesPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const categoryPosts = BLOG_POSTS.filter(p => p.category === "HIFU Machines");
 
-  const scrollCarousel = (dir: 'left' | 'right') => {
+  const scrollNext = () => {
     if (carouselRef.current) {
-      const scrollAmount = 400;
-      carouselRef.current.scrollBy({ left: dir === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+      const cardWidth = 332; 
+      carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
+    }
+  };
+
+  const scrollPrev = () => {
+    if (carouselRef.current) {
+      const cardWidth = 332; 
+      carouselRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
     }
   };
 
@@ -35,9 +42,11 @@ export default function HIFUMachinesPage() {
                 Industry-leading precision meet PAN India installation support. Elevate your practice with Woxmen's advanced HIFU technology and 24/7 technical assistance.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-primary-container text-white px-8 py-4 rounded-xl font-headline font-bold hover:shadow-xl transition-all flex items-center gap-2">
-                  Request Demo <span className="material-symbols-outlined">arrow_forward</span>
-                </button>
+                <Link href="/contact-us">
+                  <button className="bg-primary-container text-white px-8 py-4 rounded-xl font-headline font-bold hover:shadow-xl transition-all flex items-center gap-2">
+                    Request Demo <span className="material-symbols-outlined">arrow_forward</span>
+                  </button>
+                </Link>
                 <button className="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-headline font-bold hover:bg-surface-variant transition-all flex items-center gap-2 border border-outline-variant/20">
                   WhatsApp Enquiry
                 </button>
@@ -331,35 +340,42 @@ export default function HIFUMachinesPage() {
           </div>
         </section>
 
-        {/* Section 10: Blog Slider */}
-        <section className="py-24 px-8 bg-surface overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row items-end justify-between mb-8 gap-6">
+        {/* Blog/Insights */}
+        <section className="py-24 bg-surface overflow-hidden">
+          <div className="container mx-auto px-8 relative">
+            <div className="flex justify-between items-end mb-12">
               <div>
-                <h2 className="text-3xl font-headline font-extrabold text-on-surface mb-2">Latest Insights on HIFU</h2>
-                <p className="text-on-surface-variant">Stay updated with the latest in aesthetic medical technology.</p>
+                <h2 className="text-3xl font-bold font-headline">Latest Insights</h2>
+                <div className="w-12 h-1 bg-primary-container mt-2"></div>
               </div>
               <div className="flex gap-2">
-                <button onClick={() => scrollCarousel('left')} className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-all shadow-sm cursor-pointer">
+                <button onClick={scrollPrev} className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-all shadow-sm cursor-pointer">
                   <span className="material-symbols-outlined">chevron_left</span>
                 </button>
-                <button onClick={() => scrollCarousel('right')} className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-all shadow-sm cursor-pointer">
+                <button onClick={scrollNext} className="w-10 h-10 flex items-center justify-center rounded-full border border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-all shadow-sm cursor-pointer">
                   <span className="material-symbols-outlined">chevron_right</span>
                 </button>
               </div>
             </div>
-            <div ref={carouselRef} className="grid grid-flow-col auto-cols-[calc(50%-1rem)] md:auto-cols-[calc(33.333%-1.33rem)] lg:auto-cols-[calc(25%-1.5rem)] gap-8 overflow-x-auto scroll-smooth scrollbar-hide pb-4 -mx-4 px-4 overflow-y-hidden items-stretch">
-              {categoryPosts.map((blog, idx) => (
-                <Link key={idx} href={`/blogs/delhi/${blog.slug}`} target="_blank" className="article group cursor-pointer w-full flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-outline-variant/5 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="aspect-[4/3] overflow-hidden flex-shrink-0 relative">
-                    <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={blog.title} src={blog.image} />
-                  </div>
-                  <div className="flex flex-col flex-grow p-6">
-                    <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">{blog.tag}</p>
-                    <h4 className="font-headline font-bold text-lg md:text-xl mb-2 group-hover:text-primary-container transition-colors line-clamp-2">{blog.title}</h4>
-                    <p className="text-secondary text-xs md:text-sm line-clamp-2 mt-auto">{blog.description}</p>
-                  </div>
-                </Link>
+            <div ref={carouselRef} className="grid grid-flow-col auto-cols-[calc(100%-1rem)] md:auto-cols-[calc(33.333%-1.33rem)] lg:auto-cols-[calc(25%-1.5rem)] gap-8 overflow-x-auto scroll-smooth scrollbar-hide pb-4 -mx-4 px-4 overflow-y-hidden items-stretch">
+              {[...BLOG_POSTS]
+                .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                .map((blog, idx) => (
+                  <Link 
+                    key={idx} 
+                    href={`/blogs/delhi/${blog.slug}`}
+                    target="_blank"
+                    className="bg-white group cursor-pointer w-full shadow-sm hover:shadow-md transition-shadow flex flex-col h-full rounded-2xl overflow-hidden border border-outline-variant/10"
+                  >
+                    <div className="overflow-hidden aspect-[4/3] flex-shrink-0">
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={blog.title} src={blog.image} />
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <p className="text-primary text-[10px] font-black uppercase tracking-widest mb-3">{blog.tag}</p>
+                      <h3 className="text-base font-bold font-headline mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-snug">{blog.title}</h3>
+                      <p className="text-on-surface-variant text-xs line-clamp-3 mt-auto leading-relaxed">{blog.description}</p>
+                    </div>
+                  </Link>
               ))}
             </div>
           </div>
@@ -397,7 +413,9 @@ export default function HIFUMachinesPage() {
             <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-white mb-8">Upgrade Your Clinic with <br className="hidden md:block" />HIFU</h2>
             <p className="text-primary-fixed/80 text-xl mb-12 max-w-2xl mx-auto">Join 500+ successful clinics across India using Woxmen Technologies. Start your journey today with a live demonstration.</p>
             <div className="flex flex-wrap justify-center gap-6">
-              <button className="bg-white text-primary-container px-10 py-5 rounded-2xl font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform">Request Live Demo</button>
+              <Link href="/contact-us">
+                <button className="bg-white text-primary-container px-10 py-5 rounded-2xl font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform">Request Live Demo</button>
+              </Link>
               <button className="bg-primary-container border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-lg hover:bg-white/10 transition-colors">Check Best Price</button>
               <button className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform flex items-center gap-3">
                 <span className="material-symbols-outlined">chat</span> WhatsApp Sales

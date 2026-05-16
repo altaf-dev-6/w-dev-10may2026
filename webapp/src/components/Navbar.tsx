@@ -151,9 +151,11 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button className="bg-[#7B1315] text-white px-6 py-2.5 rounded-lg hover:bg-[#580006] transition-all duration-300 font-headline font-bold text-sm shadow">
-              Request Demo
-            </button>
+            <Link href="/contact-us">
+              <button className="bg-[#7B1315] text-white px-6 py-2.5 rounded-lg hover:bg-[#580006] transition-all duration-300 font-headline font-bold text-sm shadow">
+                Request Demo
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -261,9 +263,11 @@ export default function Navbar() {
 
         {/* Mobile Action Area */}
         <div className="mt-auto pb-12 flex flex-col gap-4">
-          <button className="w-full bg-[#7B1315] text-white py-4 rounded-xl font-headline font-bold text-lg shadow-lg active:scale-95 transition-transform">
-            Request Demo
-          </button>
+          <Link href="/contact-us">
+            <button className="w-full bg-[#7B1315] text-white py-4 rounded-xl font-headline font-bold text-lg shadow-lg active:scale-95 transition-transform">
+              Request Demo
+            </button>
+          </Link>
           <p className="text-center text-sm text-stone-500 font-medium">Need immediate assistance?</p>
           <Link
             href="#"
