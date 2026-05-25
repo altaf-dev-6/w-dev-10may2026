@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { BLOG_POSTS } from '@/constants/blogData';
 
 const CATEGORIES = [
@@ -89,31 +90,31 @@ export default function BlogFilterGrid({ cityName }: { cityName: string }) {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {currentPosts.map(post => (
             <article key={post.id} className="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-[#E5E5E5] flex flex-col">
-              <a href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer" className="aspect-[4/3] overflow-hidden block">
+              <Link href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer" className="aspect-[4/3] overflow-hidden block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   alt={post.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   src={post.image} 
                 />
-              </a>
+              </Link>
               <div className="p-6 flex flex-col flex-grow">
                 <span className="inline-block self-start px-3 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-widest mb-4">
                   {post.tag}
                 </span>
-                <a href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                <Link href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer">
                   <h3 className="text-xl font-headline font-bold text-on-surface mb-3 line-clamp-2 leading-tight hover:text-primary transition-colors">
                     {post.title}
                   </h3>
-                </a>
+                </Link>
                 <p className="text-on-surface-variant text-sm line-clamp-2 mb-6">
                   {post.desc}
                 </p>
                 <div className="mt-auto">
-                  <a href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer" className="text-primary font-bold text-sm flex items-center gap-2 group/btn">
+                  <Link href={`/blogs/${cityName.toLowerCase()}/${post.slug}`} target="_blank" rel="noopener noreferrer" className="text-primary font-bold text-sm flex items-center gap-2 group/btn">
                     Read More
                     <span className="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
