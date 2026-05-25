@@ -16,6 +16,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Woxmen Technologies | Aesthetic Machine Supplier India",
   description: "Elevate your practice with world-class medical technology. Premium IPL, Diode Laser, and HIFU solutions.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
