@@ -220,7 +220,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold font-headline text-stone-900 mb-8 border-l-4 border-primary pl-4">Serving Key Hubs</h2>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
             {["Delhi NCR", "Mumbai", "Bangalore", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad", "Jaipur", "Lucknow", "Chandigarh", "Nagpur"].map(city => (
-              <Link key={city} className="px-4 py-3 bg-stone-50 text-stone-600 font-medium hover:bg-primary hover:text-white transition-colors text-center text-sm" href="javascript:void(0)">{city}</Link>
+              <Link key={city} className="px-4 py-3 bg-stone-50 text-stone-600 font-medium hover:bg-primary hover:text-white transition-colors text-center text-sm" href="#">{city}</Link>
             ))}
           </div>
         </div>
