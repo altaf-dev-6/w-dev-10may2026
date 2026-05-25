@@ -1,0 +1,7 @@
+:HL["/wxm-dev/_next/static/chunks/105cjo7.jy-uo.css","style"]
+:HL["/wxm-dev/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/wxm-dev/_next/static/media/a343f882a40d2cc9-s.p.0kho-wj7-y-w1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap","style"]
+:HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css","style"]
+:HL["https://lh3.googleusercontent.com/aida-public/AB6AXuDmzgUbAirPNCbvSFyeCPhjm41Cl783t5rfW9ptXCm1HspKDeVTHs9ZZ4vjPFG27Rd7rSSktTYRbxQ4F9rfgW8CrhBVAOzekxf7yWizkGXJrlg4JQcoIgHglQ-JJ6vCec-ZSwXnWpCSLSnRGLWfKtWfK7UFBVhWElQICyJjxuRbq3RX-q9f9OFRolyRH3uEW3bFvCDBaSuLrNMIjAsrKkDkOjYnXSr2u-06SM_jHyIRt0OSE3TZpUub0065g_n7b4GKe1vYNMCbUGw","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blogs","param":null,"prefetchHints":0,"slots":{"children":{"name":"city","param":{"type":"d","key":"kolkata","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"ipl-machine-maintenance-guide","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"shMKc4PwukA4QwU1CJoJn"}

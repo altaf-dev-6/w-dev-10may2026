@@ -1,0 +1,7 @@
+:HL["/wxm-dev/_next/static/chunks/105cjo7.jy-uo.css","style"]
+:HL["/wxm-dev/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/wxm-dev/_next/static/media/a343f882a40d2cc9-s.p.0kho-wj7-y-w1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap","style"]
+:HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css","style"]
+:HL["https://lh3.googleusercontent.com/aida-public/AB6AXuBh5XZLe2pju4rghTOaI-fA6ZMo2N94pI0HV7o6mVNMHMuSyjCDvAvd8AxgaqIgqbWfUP0kopr3XBV2zTQYM-go1fxTMdtN00drWWZFBmf7VWsp3y6Dk0KJDHRrRdILCYyvHEBSI-UFw0o-0UH-sPMWQgXIdaReSGK4o2OdFwkVstC07HGordfAFhjlgF_N0qsCykIWjHT3tB41Fz_QI_I7s279h0VPjdC_8WBVhk7lb1_XnfqEFrcCySGyp4t9d2UVeuL_VtYw10c","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"blogs","param":null,"prefetchHints":0,"slots":{"children":{"name":"city","param":{"type":"d","key":"mumbai","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"shMKc4PwukA4QwU1CJoJn"}
