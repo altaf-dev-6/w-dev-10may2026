@@ -4,8 +4,8 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/w-dev-10may2026" : undefined,
-  assetPrefix: isProd ? "/w-dev-10may2026" : undefined,
+  basePath: isProd ? "/wxm-dev" : undefined,
+  assetPrefix: isProd ? "/wxm-dev" : undefined,
   typescript: { ignoreBuildErrors: true },
   images: { unoptimized: true },
 };
